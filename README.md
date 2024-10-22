@@ -22,7 +22,7 @@ This is a Django project that provides a set of RESTful APIs for managing tasks 
 ### Prerequisites
 
 - Python 3.8 or higher
-- Django 4.x
+- Django 5.x
 - Django Rest Framework (DRF)
 - SQLite (default for Django)
 - Postman (or any API testing tool if required)
@@ -48,6 +48,7 @@ This is a Django project that provides a set of RESTful APIs for managing tasks 
 
 4. **Apply migrations:**
    ```bash
+   python manage.py makemigrations
    python manage.py migrate
    ```
 
