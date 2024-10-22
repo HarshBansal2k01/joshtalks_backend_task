@@ -82,20 +82,20 @@ http://localhost:8000/admin
 ## API Endpoints
 
 ### User API
-- **GET /users/**: List all users.
-- **POST /users/**: Create a new user.
+- **GET api/v1/users/**: List all users. (Directly from DRF select GET drop-down and JSON)
+- **POST api/v1/users/**: Create a new user.
 
 ### Task API
-- **GET /tasks/**: List all tasks.
-- **POST /tasks/**: Create a new task.
+- **GET api/v1/tasks/**: List all tasks. (Directly from DRF select GET drop-down and JSON)
+- **POST api/v1/tasks/**: Create a new task.
 
 ### UserTask API
 - **POST /usertasks/**: Assign a task to a user (or multiple users).
-- **GET /tasks-for-user/{user_id}/**: Retrieve tasks for a specific user.
-- **GET /users-for-task/{task_id}/**: Retrieve users assigned to a specific task.
+- **GET /tasks-for-user/{user_id}/**: Retrieve tasks for a specific user. (Check the id from users (GET))
+- **GET /users-for-task/{task_id}/**: Retrieve users assigned to a specific task. *Check the id from tasks (GET))
 
 ### StatusUpdate API
-- **PATCH /status-update/**: Update the status of a task assigned to a user.
+- **POST /status-update/**: Update the status of a task assigned to a user.
 
 ---
 
