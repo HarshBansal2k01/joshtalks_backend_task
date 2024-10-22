@@ -95,7 +95,7 @@ http://localhost:8000/admin
 - **GET /users-for-task/{task_id}/**: Retrieve users assigned to a specific task.
 
 ### StatusUpdate API
-- **PATCH /status-update/{pk}/**: Update the status of a task assigned to a user.
+- **PATCH /status-update/**: Update the status of a task assigned to a user.
 
 ---
 
