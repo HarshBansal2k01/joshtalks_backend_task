@@ -13,18 +13,15 @@ class TaskSerializer(serializers.ModelSerializer):
         fields = ['id', 'name', 'description', 'created_at', 'task_type', 'status', 'completed_at']
 
 class UserTaskSerializer(serializers.ModelSerializer):
-    # Dropdown for users and tasks
+   
     user = serializers.PrimaryKeyRelatedField(queryset=User.objects.all())  # Displays user dropdown
     task = serializers.PrimaryKeyRelatedField(queryset=Task.objects.all())  # Displays task dropdown
+    status = serializers.CharField()  # This ensures the status is reflected correctly
 
     class Meta:
         model = UserTask
         fields = ['id', 'user', 'task', 'status', 'assigned_at']
 
-    def create(self, validated_data):
-        return UserTask.objects.create(**validated_data)
-
-# serializers.py
 
 class StatusUpdateSerializer(serializers.ModelSerializer):
     user = serializers.PrimaryKeyRelatedField(queryset=User.objects.all(), write_only=True)  # Dropdown for users
@@ -55,4 +52,3 @@ class StatusUpdateSerializer(serializers.ModelSerializer):
         )
 
         return status_update
-
